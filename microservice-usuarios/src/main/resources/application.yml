@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: microservice-usuarios
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      uri: mongodb://localhost/mServicesPruebas
+           
+server:
+  port: 0
+  
+#Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+       
