@@ -82,6 +82,14 @@
   				</dependency>
   			</dependencies>
   		</plugin>
+  		<plugin>
+  			<groupId>pl.project13.maven</groupId>
+  			<artifactId>git-commit-id-plugin</artifactId>
+  			<configuration>
+  				<dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
+  				<dateFormat>dd-MM-yyyy HH:mm:ssZ</dateFormat>	
+  			</configuration>
+  		</plugin>
   	</plugins>
   </build>
   <dependencyManagement>

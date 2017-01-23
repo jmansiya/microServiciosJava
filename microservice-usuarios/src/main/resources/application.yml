@@ -15,4 +15,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
-       
+
+#Info para consola de administración
+management:
+  info:
+    git:
+      mode: SIMPLE          
