@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Employee
+    
+  data:
+    mongodb:
+      host: localhost
+      port: 32768
+      database: microserviceblog
