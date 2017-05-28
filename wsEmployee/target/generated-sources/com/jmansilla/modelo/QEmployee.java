@@ -21,7 +21,13 @@ public class QEmployee extends EntityPathBase<Employee> {
 
     public final NumberPath<Integer> edad = createNumber("edad", Integer.class);
 
+    public final StringPath email = createString("email");
+
+    public final StringPath fullName = createString("fullName");
+
     public final StringPath id = createString("id");
+
+    public final StringPath managerEmail = createString("managerEmail");
 
     public final StringPath name = createString("name");
 
