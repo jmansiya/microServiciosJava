@@ -60,13 +60,13 @@ public class EmployeeServiceTest {
     @Test
     public void testEliminarEmpleado(){
     	//Eliminamos el empleado dado. para ello primero lo tendremos que obtener.
-    	Employee empl = this.employeeService.getEmpleado("Jose", 35);
+    	Employee empl = this.employeeService.getEmpleado("Alice", 23);
     	
     	assertNotNull(empl);
     	
     	this.employeeService.eliminarEmpleado(empl);
     	
-    	empl = this.employeeService.getEmpleado("Jose", 35);
+    	empl = this.employeeService.getEmpleado("Alice", 23);
     	
     	assertNull(empl);
     }

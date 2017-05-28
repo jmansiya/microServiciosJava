@@ -1,5 +1,7 @@
 package com.jmansilla.servicio.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
@@ -43,6 +45,18 @@ public class EmployeeService implements IEmployeeService{
 				.and(empleado.edad.eq(edad));
 		
 		return repositorioEmployee.findOne(predicado);
+	}
+
+	@Override
+	public Employee getEmpleadoById(String id) {
+		// TODO Auto-generated method stub
+		return repositorioEmployee.findOne(id);
+	}
+
+	@Override
+	public List<Employee> getEmpleados() {
+		// TODO Auto-generated method stub
+		return repositorioEmployee.findAll();
 	}
 	
 }

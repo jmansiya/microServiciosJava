@@ -1,5 +1,7 @@
 package com.jmansilla.servicio;
 
+import java.util.List;
+
 import com.jmansilla.modelo.Employee;
 
 public interface IEmployeeService {
@@ -12,4 +14,9 @@ public interface IEmployeeService {
 	public void eliminarTodosEmpleados();
 	
 	public Employee getEmpleado(String name, int edad);
+	
+	public Employee getEmpleadoById(String id);
+
+	public List<Employee> getEmpleados();
 }
+
