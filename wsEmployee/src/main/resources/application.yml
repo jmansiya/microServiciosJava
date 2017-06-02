@@ -4,6 +4,17 @@ spring:
     
   data:
     mongodb:
-      host: localhost
-      port: 32768
-      database: microserviceblog
+      uri: mongodb://mongodb/microserviceblog
+      
+---
+
+spring:
+  profiles: docker
+  
+  data:
+    mongodb:
+      uri: mongodb://mongodb/microserviceblog
+#      host: mongodocker
+#      port: 2020
+#      database: microserviceblog
+      
