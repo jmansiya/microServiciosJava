@@ -1,11 +1,42 @@
 spring:
   application:
     name: admin-dashboard
+  boot:
+    admin:
+      username: "${security.user.name}"       #These two are needed so that the client
+      password: "${security.user.password}"   #can register at the protected server api
+      client:
+        metadata:
+          user.name: "${security.user.name}"          #These two are needed so that the server
+          user.password:  "${security.user.password}" #can access the proteceted client endpoints
  
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
   client:
+    registryFetchIntervalSeconds: 5
     serviceUrl:
-       defaultZone: http://localhost:1111/eureka/
-      
+       defaultZone: http://localhost:8075/eureka/
+
+management:
+  security:
+    enabled: false   
+
 server:
   port: 8088
+
+security:
+  user:
+    name: user
+    password: pass
+  
+---
+
+spring:
+  profiles: docker
+  
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://eureka-docker:8075/eureka/
